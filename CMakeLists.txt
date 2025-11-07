@@ -17,5 +17,6 @@ foreach(MAIN_FILE IN LISTS MAIN_FILES)
     # Replace directory separators to underscore for executable name (optional)
     string(REPLACE "/" "_" EXEC_NAME ${PROG_DIR})
 
-    add_executable(${EXEC_NAME} ${SRC})
+    add_executable(${EXEC_NAME} ${SRC}
+            Ukoly_7-11-2025/main.cpp)
 endforeach()
