@@ -1,3 +1,4 @@
+#NIGDO SEM DOPICI NIC NEPISTE KURWA 
 cmake_minimum_required(VERSION 3.16)
 project(Skupinova_Prace_2025)
 
