@@ -12,6 +12,6 @@ int main() {
     std::cout << "\nRolling 3d20:\n";
     int multiRoll = rollMultipleDice(3, 20);
     std::cout << "Total: " << multiRoll << "\n";
-
+// zde jsem si jenom potreboval skusit jestli mi funguje a) program b) cmake
     return 0;
 }
