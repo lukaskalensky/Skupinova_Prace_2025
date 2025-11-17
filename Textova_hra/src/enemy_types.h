@@ -7,33 +7,38 @@
 
 #include <string>
 #include <vector>
-#include "loot.h"
+#include "loot.h"  // Použijeme Item z loot.h
 
 struct Enemy {
     std::string name;
-    int difficultyNumber; // Pocet na co hrac musi hodit na kocke s bonusmi aby porazil enemaka
-    int goldReward;       // Gold  reward z vyhry
-    std::vector<Item> possibleLoot; // Itemy ktore je mozne ziskat po vyhre
+    int difficultyNumber;
+    int goldReward;
+    int tier; // 1=easy, 2=medium, 3=hard, 4=boss
+    std::vector<std::string> possibleLootNames;
     std::string description;
 };
 
-// Getter na vsetky typy enemakov
+// Get all enemy types
 std::vector<Enemy> getAllEnemies();
 
-// Getter na random enemaka podla tieru
-Enemy getRandomEnemy(int tier); // 1=lahky, 2=medium, 3=tazky, 4=boss
+// Load enemies from file
+std::vector<Enemy> loadEnemiesFromFile(const std::string& filename);
 
-// Geter na vsetky itemy
+// Get random enemy by difficulty tier
+Enemy getRandomEnemy(int tier); // 1=easy, 2=medium, 3=hard, 4=boss
+
+// Get all available items
 std::vector<Item> getAllItems();
 
-// Loadnut itemy ze suboru
+// Load items from file
 std::vector<Item> loadItemsFromFile(const std::string& filename);
 
-// random drop na enemaka
+// Get random loot drop from enemy (uses global loot table)
 Item getEnemyLootDrop(const Enemy& enemy);
 
-// Vypocet celeho bonusu v combate
+// Calculate total combat bonus from items
 int calculateCombatBonus(const std::vector<Item>& inventory);
+
 
 
 #endif //SKUPINOVA_PRACE_2025_ENEMY_TYPES_H

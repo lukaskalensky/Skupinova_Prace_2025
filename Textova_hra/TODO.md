@@ -9,7 +9,7 @@
 ## Nikola Haluzova
 - [ ] pravidla s markem
 - [ ] kecy a rozhodnuti
-- [ ] 
+- [ ] invetar
 
 ## Vladan Korenek
 - [ ] kostka
